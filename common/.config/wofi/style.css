@@ -1,0 +1,58 @@
+* {
+    font-family: "Iosevka Nerd Font", monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+window {
+    margin: 0px;
+    border: 2px solid #585b70; /* Surface 1 */
+    border-radius: 5px;
+    background-color: #1e1e2e; /* Base */
+    font-family: monospace;
+}
+
+#input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #11111b; /* Crust */
+    color: #cdd6f4; /* Text */
+    background-color: #11111b; /* Crust */
+}
+
+#input image {
+    color: #cdd6f4; /* Text */
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #1e1e2e; /* Base */
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #1e1e2e; /* Base */
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #cdd6f4; /* Text */
+}
+
+#entry:selected {
+    background-color: #313244; /* Surface 0 */
+    font-weight: normal;
+}
+
+#text:selected {
+    background-color: #313244; /* Surface 0 */
+    font-weight: normal;
+}
