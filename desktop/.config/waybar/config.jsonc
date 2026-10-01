@@ -1,0 +1,51 @@
+{
+  "include": [
+    "~/.config/waybar/modules.jsonc"
+  ],
+  "position": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "height": 42,
+  "modules-left": [
+    "custom/weather",
+    "cpu",
+    "memory",
+    "disk"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "temperature",
+    "pulseaudio",
+    "clock",
+    "custom/sep",
+    "tray"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "separate-outputs": false,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "active": "",
+      "default": ""
+    }
+  },
+  "network": {
+    "format": "󰟪 Open",
+    "format-disconnected": "󱅾 Closed",
+    "tooltip": false
+  }
+}

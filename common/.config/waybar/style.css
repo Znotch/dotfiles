@@ -1,23 +1,36 @@
+/* Catppuccin Mocha Palette */
+@define-color bg    #1e1e2e; /* Base */
+@define-color fg    #cdd6f4; /* Text */
+@define-color blk   #313244; /* Surface0 */
+@define-color red   #f38ba8; /* Red */
+@define-color grn   #a6e3a1; /* Green */
+@define-color ylw   #f9e2af; /* Yellow */
+@define-color blu   #89b4fa; /* Blue */
+@define-color mag   #cba6f7; /* Mauve */
+@define-color cyn   #89dceb; /* Sky */
+@define-color brblk #585b70; /* Surface2 */
+@define-color wht   #cdd6f4; /* Text (Replaced stark white with soft text) */
+
 * {
     border: none;
     border-radius: 10px;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 25px;
     min-height: 0;
 }
 
 window#waybar {
     background: rgba(21, 18, 27, 0);
-    color: #cdd6f4;
+    color: @wht;
 }
 
 tooltip {
-    background: #000000;
+    background: @bg;
     border-radius: 7px;
     border-width: 2.5px;
     border-style: solid;
-    border-color: #8aadf4;
+    border-color: @blu;
     padding-right: 5px;
     padding-left: 5px;
     padding-top: 5px;
@@ -25,10 +38,10 @@ tooltip {
 }
 
 #workspaces button {
-    color: #313244;
+    color: #f9e2af;
     margin-right: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 #workspaces button.active {
@@ -59,9 +72,10 @@ tooltip {
     color: #f38ba8;
 }
 
-/* Added network and battery, removed language, removed duplicate tray */
 #custom-weather,
+#temperature,
 #network,
+#bluetooth,
 #battery,
 #cpu,
 #window,
@@ -86,71 +100,13 @@ tooltip {
     background: #1e1e2e;
     border-radius: 13px;
     margin-left: 5px;
-    margin-right: 5px;
+    padding-right: 5px;
 }
 
 #window {
     border-radius: 7px;
     margin-left: 60px;
     margin-right: 60px;
-}
-
-/* --- Left Pill Modules --- */
-#cpu {
-    border-radius: 13px 0px 0px 13px;
-    padding-left: 10px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-
-#memory {
-    color: #89b4fa;
-    border-radius: 0px 0px 0px 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-#disk {
-    color: #f9e2af;
-    border-radius: 0px 13px 13px 0px;
-    margin-left: 0px;
-}
-
-
-/* --- Right Pill Modules --- */
-#network {
-    color: #f9e2af;
-    border-radius: 13px 0px 0px 13px;
-    margin-right: 0px;
-}
-
-#pulseaudio {
-    color: #89b4fa;
-    border-radius: 0px 0px 0px 0px;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-
-#pulseaudio.microphone {
-    color: #cba6f7;
-    border-radius: 0px 0px 0px 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-#battery {
-    color: #a6e3a1;
-    border-radius: 0px 0px 0px 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-#battery.warning {
-    color: #f9e2af;
-}
-
-#battery.critical {
-    color: #f38ba8;
 }
 
 #clock {
@@ -160,10 +116,9 @@ tooltip {
     margin-left: 0px;
 }
 
-
-/* --- Standalone Modules --- */
-#custom-weather {
-    border-radius: 13px 13px 13px 13px;
+#network {
+    color: #f9e2af;
+    border-radius: 13px 0px 0px 13px;
     margin-right: 0px;
 }
 
@@ -193,9 +148,70 @@ tooltip {
     margin-right: 5px;
 }
 
+#memory {
+    color: #89b4fa;
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#disk {
+    color: #f9e2af;
+    border-radius: 0px 13px 13px 0px;
+    margin-left: 0px;
+}
+
 #bluetooth {
     color: #89b4fa;
-    border-radius: 0px 13px 13px 0px;
-    margin-left: 5px;
-    margin-right: 5px;
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+} 
+
+#pulseaudio {
+    color: @grn;
+    border-radius: 0px 0px 0px 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#pulseaudio.microphone {
+    color: #cba6f7;
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#temperature {
+    color: @red;
+    border-radius: 0px 0px 0px 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#cpu {
+    border-radius: 13px 0px 0px 13px;
+    padding-left: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#custom-weather {
+    border-radius: 13px 13px 13px 13px;
+    margin-right: 15px;
+}
+
+#battery {
+    color: #a6e3a1;
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
 }

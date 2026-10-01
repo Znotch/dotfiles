@@ -1,0 +1,62 @@
+{
+  "include": [
+    "~/.config/waybar/modules.jsonc"
+  ],
+  "position": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-right": 10,
+  "height": 41,
+  "modules-left": [
+    "custom/weather",
+    "cpu",
+    "memory",
+    "disk"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "battery",
+    "clock",
+    "custom/sep",
+    "tray"
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "active": "",
+      "urgent": "",
+      "persistent": "",
+      "focused": "",
+      "default": ""
+    },
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "*": 9
+    }
+  },
+  "network": {
+    "format-wifi": "<span color='#f9e2af'>󰤨 </span><span color='#cdd6f4'>{essid}</span>",
+    "format-disconnected": "<span color='#f38ba8'>󰤭 </span><span color='#cdd6f4'>Offline</span>",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰤨",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "foot -e nmtui"
+  }
+}
