@@ -34,5 +34,7 @@ shopt -s autocd
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
+fastfetch
+
 PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
