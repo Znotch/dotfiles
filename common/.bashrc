@@ -31,5 +31,8 @@ shopt -s histappend
 # Typing just a directory name cd's into it
 shopt -s autocd
 
+# pipx
+export PATH="$PATH:$HOME/.local/bin"
+
 PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"

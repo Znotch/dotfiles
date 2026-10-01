@@ -33,7 +33,7 @@
     },
     {
       "type": "packages",
-      "key": "󰏖 Packages",
+      "key": "󰏖 Pacman",
       "keyColor": "yellow" 
     },
     {
@@ -64,8 +64,8 @@
     },
     "break",
     {
-	"type":"colors",
-	"symbol":"circle"
+      "type": "colors",
+      "symbol": "circle"
     }
   ]
 }

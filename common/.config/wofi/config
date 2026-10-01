@@ -1,8 +1,7 @@
 # mode & placement
 show=drun
-location=center
-width=40%
-height=40%
+location=top
+width=700
 lines=8
 columns=2
 dynamic_lines=false
@@ -31,3 +30,4 @@ key_backward=Shift-ISO_Left_Tab
 
 # stylesheet
 style=/home/chris/.config/wofi/style.css
+
