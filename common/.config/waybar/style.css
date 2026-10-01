@@ -1,3 +1,4 @@
+@import url("file:///home/chris/.config/waybar/host.css");
 /* Catppuccin Mocha Palette */
 @define-color bg    #1e1e2e; /* Base */
 @define-color fg    #cdd6f4; /* Text */
@@ -15,7 +16,6 @@
     border: none;
     border-radius: 10px;
     font-family: "JetBrainsMono Nerd Font", monospace;
-    font-size: 16px;
     font-weight: bold;
     min-height: 0;
 }
