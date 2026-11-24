@@ -14,3 +14,6 @@ vim.keymap.set('v', '<leader>y', '<cmd>%y+<CR>', {desc = "Yank to clp"})
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+--Diagnostics list
+vim.keymap.set('n', '<leader>d', '<cmd>Telescope diagnostics<CR>', {desc = "List diagnostics"})
